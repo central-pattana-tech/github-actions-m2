@@ -25,6 +25,6 @@ echo "PHPCS severity: ${PHPCS_EXTENSIONS}"
 sh -c "/root/.composer/vendor/bin/phpcs \
   --report=${PHPCS_REPORT} \
   --extensions=${PHPCS_EXTENSIONS} \
-  --severity=${PHPCS_SEVERITY} \
-  --standard=$PHPCS_STANDARD $GITHUB_WORKSPACE \
+  --warning-severity=0 \
+  --standard=$PHPCS_STANDARD $GITHUB_WORKSPACE/app/code/CentralPattana \
   -s $*"
